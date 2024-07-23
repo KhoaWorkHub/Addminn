@@ -33,6 +33,7 @@ export class OrderListComponent implements OnInit {
   pageSize = 9;
   searchOrder:string = '';
   listDelivery : any[];
+  listDeliveryActive : any[];
   listStatusOrder: any[];
   listStatusDelivery: any[];
   listStatusDeliveryStep: any[];
@@ -193,6 +194,9 @@ export class OrderListComponent implements OnInit {
     }
     this.deliverService.getAllDelivery().subscribe((res) =>{
       this.listDelivery = res;
+      this.listDeliveryActive = res.filter(item =>{
+        return item.status === 'active';
+      });
       // this.count = res?.meta?.total;
     }, error => {
       this.toastService.show('Error get list order', { classname: 'bg-danger text-light', delay: 5000 });
@@ -270,9 +274,9 @@ export class OrderListComponent implements OnInit {
     window.open(url,"_blank");
   }
   getDelivery(_id:any) {
-    return this.listDelivery.find(({id}) =>id === _id);
+    return this.listDelivery.find(({userId}) =>userId === _id);
   }
   getDeliveryName(_id:any) {
-    return this.listDelivery.find(({id}) =>id === _id)?.userName;
+    return this.listDelivery.find(({userId}) =>userId === _id)?.userName;
   }
 }
