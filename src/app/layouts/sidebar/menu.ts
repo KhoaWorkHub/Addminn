@@ -15,12 +15,12 @@ export const MENU: MenuItem[] = [
             text: 'MENUITEMS.DASHBOARDS.BADGE',
         },
         subItems: [
-            {
-                id: 3,
-                label: 'MENUITEMS.DASHBOARDS.LIST.DEFAULT',
-                link: '/dashboard',
-                parentId: 2
-            },
+            // {
+            //     id: 3,
+            //     label: 'MENUITEMS.DASHBOARDS.LIST.Statistic',
+            //     link: '/dashboard',
+            //     parentId: 2
+            // },
             // {
             //     id: 4,
             //     label: 'MENUITEMS.DASHBOARDS.LIST.SAAS',
