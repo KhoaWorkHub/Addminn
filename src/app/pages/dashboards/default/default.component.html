@@ -135,9 +135,9 @@
               <div class="col-md-4">
                 <app-stat [title]="'Price success'" [value]='dashBoardInfo?.revenue_data.price_success' [icon]="'bx bx-purchase-tag-alt'"></app-stat>
               </div>
-              <div class="col-md-4">
-                <app-stat [title]="'Order Init'" [value]='dashBoardInfo?.order_info.order_init' [icon]="'bx bx-copy-alt'"></app-stat>
-              </div>
+<!--              <div class="col-md-4">-->
+<!--                <app-stat [title]="'Order Init'" [value]='dashBoardInfo?.order_info.order_init' [icon]="'bx bx-copy-alt'"></app-stat>-->
+<!--              </div>-->
               <div class="col-md-4">
                 <app-stat [title]="'Order Wait Payment'" [value]='dashBoardInfo?.order_info.order_wait_payment' [icon]="'bx bx-archive-in'"></app-stat>
               </div>
@@ -154,7 +154,7 @@
                 <app-stat [title]="'Price Wait Payment'" [value]='dashBoardInfo?.revenue_data.price_wait_payment' [icon]="'bx bx-purchase-tag-alt'"></app-stat>
               </div>
               <div class="col-md-4">
-                <app-stat [title]="'Price Delivery'" [value]='dashBoardInfo?.order_info.total_order' [icon]="'bx bx-copy-alt'"></app-stat>
+                <app-stat [title]="'Price Delivery'" [value]='dashBoardInfo?.revenue_data.price_delivery' [icon]="'bx bx-copy-alt'"></app-stat>
               </div>
               <div class="col-md-4">
                 <app-stat [title]="'Price Cancel'" [value]='dashBoardInfo?.revenue_data.price_cancel' [icon]="'bx bx-archive-in'"></app-stat>
